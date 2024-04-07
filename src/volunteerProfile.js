@@ -1,11 +1,10 @@
 import './volunteerProfile.css';
-import { Button, Container, Col, Row, Image} from 'react-bootstrap'
-import DropdownMenu from './DropdownMenu'
-import './DropdownMenu.css'
+import { Button, Container, Col, Row, Image} from 'react-bootstrap';
+import DropdownMenu from './DropdownMenu';
 
 function volunteerProfile() {
   return (
-    <>
+    <div className="volunteerProfile">
       <Row id="main">
         <Col id="sidebar"></Col>
           <Col id="mainCol">
@@ -96,7 +95,7 @@ function volunteerProfile() {
           </Col>
         <Col id="sidebar"></Col>
       </Row>
-    </>
+    </div>
   );
 }
 

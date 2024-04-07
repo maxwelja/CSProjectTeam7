@@ -8,7 +8,7 @@ function DropdownMenu() {
   return (
     <div className="Dropdown">
       <header className="Dropdown-header">
-         <DropdownButton id="dropdown-basic-button" title="☰">
+         <DropdownButton className="btn btn-secondary btn-sm" id="dropdown-basic-button" title="☰">
             <Dropdown.Item href="#/action-1">Home Page</Dropdown.Item>
             <Dropdown.Item href="#/action-2">Profile</Dropdown.Item>
             <Dropdown.Item href="#/action-3">Event Calendar</Dropdown.Item>
