@@ -1,20 +1,26 @@
 import './App.css';
-import { Button, Container, Col, Row, Image} from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import volunteerProfile from './volunteerProfile';
-import DropdownMenu from './DropdownMenu';
+import { Route, Routes } from "react-router-dom";
+import DropdownMenu from './components/DropdownMenu';
+import Home from './pages/Home';
+import VolunteerProfile from './pages/VolunteerProfile';
+// import OrganizationProfile from './pages/OrganizationProfile';
+// import EventList from './pages/EventList';
+// import EventCalendar from './pages/EventCalendar';
 // import db from '../../playground-1.mongodb';
 
-const Home = () => <h1>Home Page</h1>
 function App() {
     return (
-        <Router>
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/vProfile" element={<volunteerProfile />} />
-                <Route path="/dropdown" element={<DropdownMenu />} />
-            </Routes>
-        </Router>
+        <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/VolunteerProfile" element={<VolunteerProfile />} />
+               {/*
+               <Route path="/orgProfile" element={<OrganizationProfile />} />
+               <Route path="/eventList" element={<EventList />} />
+               <Route path="/EventCalendar" element={<EventCalendar />} />
+               <Route path="/login" element={<Login />} />
+                */}
+            <Route path="/dropdown" element={<DropdownMenu />} />
+        </Routes>
     )
 }
 

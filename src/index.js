@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const mongoose = require('mongoose');
+const url = "mongodb+srv://maxwelja129:ITCXtM47ZEHxUARl@volunteerise-cluster0.ehgq8zj.mongodb.net/?retryWrites=true&w=majority"
+                        //  <username>:<password>
 root.render(
   <React.StrictMode>
+    <Router>
       <App />
+    </Router>
   </React.StrictMode>
 );
 

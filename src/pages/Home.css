@@ -1,0 +1,11 @@
+.Home {
+    max-width: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #5271ff;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #555;
+    margin: 10px;
+  }
