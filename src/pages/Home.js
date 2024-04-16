@@ -3,7 +3,7 @@ import './Home.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { Button, Container, Col, Row, Image} from 'react-bootstrap';
-import DropdownMenu from './DropdownMenu';
+import DropdownMenu from '../Components/DropdownMenu';
 
 
 function Home() {
