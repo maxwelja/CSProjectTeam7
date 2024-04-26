@@ -1,15 +1,48 @@
-import './NavBar.css';
-import { Button, Container, Col, Row, Image} from 'react-bootstrap';
+import '../styles/NavBar.css';
+import {useEffect, useState} from 'react';
+import {useLocation} from 'react-router-dom';
+import { Container, Image} from 'react-bootstrap';
 import DropdownMenu from '../components/DropdownMenu';
 
 function NavBar(){
+    const location = useLocation();
+    const [pageTitle, setPageTitle] = useState('');
+  
+    useEffect(() => {
+      // Define a mapping of route paths to corresponding titles
+      const routeToTitleMap = {
+        '/Home': 'Home',
+        '/home': 'Home',
+        '/Login': 'Login',
+        '/login': 'Login',
+        '/VolunteerProfile': 'Volunteer Profile',
+        '/volunteerprofile': 'Volunteer Profile',
+        '/OrgProfile': 'Organization Profile',
+        '/orgprofile': 'Organization Profile',
+        '/EventList': 'Event List',
+        '/eventlist': 'Event List',
+        '/NavBar': 'Navigation Bar',
+        '/navbar': 'Navigation Bar'
+      };
+  
+      // Get the current route's pathname
+      const currentPath = location.pathname;
+  
+      // Determine the title based on the current route
+      const title = routeToTitleMap[currentPath] || 'Default Title';
+  
+      // Update the page title
+      setPageTitle(title);
+    }, [location.pathname]);
+
     return(
         <div className='NavBar'>
-            <Container>
-                <Image src="images/logo100.png" />
+            <Container id="nav">
                 <DropdownMenu />
-                <Button id="btn1">Events RSVP'd</Button>
-                <Button id="btn1">Events RSVP'd</Button>
+                <h1>{pageTitle}</h1>
+                <Container id="navLogo">
+                  <Image src="images/logo60.png" />
+                </Container>
             </Container>
         </div>
     )
