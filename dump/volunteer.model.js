@@ -6,8 +6,8 @@ const VolunteerSchema = new mongoose.Schema({
     volunteerPassword: {type: String, required: true}
     volunteerKarma: {type: Double, required: true}
     volunteerBio: {type: String, required: true}
-    volunteerRsvp: [{type: String}]
-    volunteerAttend: [{type: String}]
+    volunteerRsvp: {type: [String]}
+    volunteerAttend: {type: [String]}
 }, {collection: 'VolunteerData'}
 
 )
