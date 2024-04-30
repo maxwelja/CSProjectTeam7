@@ -5,8 +5,8 @@ const OrganizationSchema = new mongoose.Schema({
     orgEmail: {type: String, unique: true, required: true},
     orgLink: {type:String, unique:true, required:true},
     orgPassword: {type: String, required: true}
-    orgHosted: [{type: String}]
-    orgCollaborate: [{type: String}]
+    orgHosted: {type: [String]}
+    orgCollaborate: {type: [String]}
 }, {collection: 'OrganizationData'}
 
 )
