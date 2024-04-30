@@ -7,9 +7,9 @@ const eventSchema = new Schema ({
     organization: String,
     location: String,
     date: String
-    rsvp: [{type: String}]
-    attendance: [{type: String}]
-    collaborator: [{type: String}]
+    rsvp: {type: [String]}
+    attendance: {type: [String]}
+    collaborator: {type: [String]}
 }, { timestamps: true });
 
 const testSchema = new Schema ({
